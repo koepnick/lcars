@@ -22,8 +22,15 @@
 
 	   {
 	   	"type":"font",
-	   	"defName":"FONT_LCARS_60",
-	   	"characterRegex": "[:0-9]",
+	   	"defName":"FONT_LCARS_40_NUMBERS",
+	   	"characterRegex": "[.:0-9]",
+	   	"file":"fonts/LCARS.ttf"
+	   },
+
+	   {
+	   	"type":"font",
+	   	"defName":"FONT_LCARS_60_NUMBERS",
+	   	"characterRegex": "[.:0-9]",
 	   	"file":"fonts/LCARS.ttf"
 	   },
 
