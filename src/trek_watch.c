@@ -38,6 +38,7 @@ void update_display(PblTm *tick_time) {
   // Draws only if changed, saves your precious battery!
   // Get new_date_text
   string_format_time(new_date_text, sizeof(date_text), "%a %m.%d", tick_time);
+  new_date_text[0] += 32; // lowercase the weekday
   // Replace leading '0' in month and day with ' ' 
   if (new_date_text[4] == '0') new_date_text[4] = ' ';
   if (new_date_text[7] == '0') new_date_text[7] = ' ';
