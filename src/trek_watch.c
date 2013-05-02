@@ -98,7 +98,7 @@ void handle_init(AppContextRef ctx) {
   text_layer_init(&text_date_layer, window.layer.frame);
   text_layer_set_text_color(&text_date_layer, GColorWhite);
   text_layer_set_background_color(&text_date_layer, GColorClear);
-  layer_set_frame(&text_date_layer.layer, GRect(78, 5, 144-78, 168-5));
+  layer_set_frame(&text_date_layer.layer, GRect(77, 5, 60, 20));
   text_layer_set_font(&text_date_layer, fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LCARS_BOLD_17)));
   layer_add_child(&window.layer, &text_date_layer.layer);
 
