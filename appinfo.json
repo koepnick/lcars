@@ -1,16 +1,14 @@
 {
-  "uuid": "a94beb35-fda3-4b00-a4f5-4c17c3185bbd",
+  "uuid": "defce990-180b-4ba7-bec9-387e74bdd7fb",
   "shortName": "LCARS",
   "longName": "LCARS",
-  "companyName": "Utopia Planitia",
+  "companyName": "UtopiaPlanitia",
   "versionCode": 1,
   "versionLabel": "1.0.0",
   "watchapp": {
     "watchface": true
   },
-  "appKeys": {
-    "dummy": 0
-  },
+  "appKeys": {},
   "resources": {
     "media": [
 		{
@@ -19,15 +17,22 @@
 			"file":	"images/background.png"
 		},
 		{
-			"type": "font",
-			"name": "FONT_LCARS_60",
-			"file": "fonts/LCARS_60.ttf"
+			"menuIcon": true,
+			"type": "png",
+			"name": "IMAGE_MENU_ICON",
+			"file":	"images/icon.png"
 		},
-		{
-			"type": "font",
-			"name": "FONT_LCARS_BOLD_17",
-			"file": "fonts/LCARS_BOLD_17.ttf"
-		}
-		]
+    {
+      "characterRegex": "[:0-9APMapm]",
+      "type": "font",
+      "name": "FONT_LCARS_60",
+      "file": "fonts/LCARS.ttf"
+    },
+    {
+      "type": "font",
+      "name": "FONT_LCARS_BOLD_17",
+      "file": "fonts/LCARS_BOLD.ttf"
+    }
+	]
   }
 }

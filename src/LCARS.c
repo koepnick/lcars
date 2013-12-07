@@ -66,21 +66,18 @@ static void window_load(Window *window) {
 	text_date_layer = text_layer_create( GRect( 78, 5, 144-78, 168-5) );
 	text_layer_set_text_color( text_date_layer, GColorWhite );
 	text_layer_set_background_color( text_date_layer, GColorClear );
-	text_layer_set_font( text_date_layer, 
-		fonts_load_custom_font( resource_get_handle( RESOURCE_ID_FONT_LCARS_BOLD_17 ) ) );
+	text_layer_set_font( text_date_layer, fonts_load_custom_font( resource_get_handle( RESOURCE_ID_FONT_LCARS_BOLD_17 ) ) );
 
 
 	text_time_layer = text_layer_create( GRect( 40, 28, 144-40, 168-48) );
 	text_layer_set_text_color( text_time_layer, GColorWhite );
 	text_layer_set_background_color( text_time_layer, GColorClear );
-	text_layer_set_font( text_time_layer, 
-		fonts_load_custom_font( resource_get_handle( RESOURCE_ID_FONT_LCARS_60 ) ) );
+	text_layer_set_font( text_time_layer, fonts_load_custom_font( resource_get_handle( RESOURCE_ID_FONT_LCARS_60 ) ) );
 
 	text_ampm_layer = text_layer_create( GRect( 40, 85, 144-40, 168-105) );
 	text_layer_set_text_color( text_ampm_layer, GColorWhite );
 	text_layer_set_background_color( text_ampm_layer, GColorClear );
-	text_layer_set_font( text_ampm_layer, 
-		fonts_load_custom_font( resource_get_handle( RESOURCE_ID_FONT_LCARS_60 ) ) );
+	text_layer_set_font( text_ampm_layer, fonts_load_custom_font( resource_get_handle( RESOURCE_ID_FONT_LCARS_60 ) ) );
 
 	tick_timer_service_subscribe( SECOND_UNIT, handle_minute_tick );
 
