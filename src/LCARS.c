@@ -39,7 +39,6 @@ void handle_minute_tick( struct tm* tick_time, TimeUnits units_changed )
 	if( !clock_is_24h_style() )
 	{
 		strftime( ampm_text, sizeof( ampm_text), "%p", tick_time );
-APP_LOG(APP_LOG_LEVEL_DEBUG, ampm_text, window);
 		if( ampm_text[0] == 'A' )
 		{
 			strncpy( ampm_text, "am", sizeof( "am" ) );
@@ -100,7 +99,7 @@ static void init(void) {
     .load = window_load,
     .unload = window_unload,
   });
-  const bool animated = true;
+  const bool animated = false;
   window_stack_push(window, animated);
 }
 
@@ -110,7 +109,6 @@ static void deinit(void) {
 
 int main(void) {
   init();
-
   app_event_loop();
   deinit();
 }
