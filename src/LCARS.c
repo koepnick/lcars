@@ -21,7 +21,7 @@ void handle_minute_tick( struct tm* tick_time, TimeUnits units_changed )
 {
 	static char date_text[] = "Xxx 00.00";
 	static char time_text[] = "00:00";
-	static char	ampm_text[] = "  ";
+	static char	ampm_text[] = "pm";
 	char *time_format;
 
 	strftime( date_text, sizeof( date_text ), "%a %m.%d", tick_time );
@@ -42,11 +42,8 @@ void handle_minute_tick( struct tm* tick_time, TimeUnits units_changed )
 		if( ampm_text[0] == 'A' )
 		{
 			strncpy( ampm_text, "am", sizeof( "am" ) );
-		} else {
-			strncpy( ampm_text, "pm", sizeof( "pm" ) );
-		}
+		} 
 	}
-
 	text_layer_set_text( text_ampm_layer, ampm_text );
 
 }
